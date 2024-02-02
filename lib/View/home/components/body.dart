@@ -7,7 +7,6 @@ import '../../../Services/constants.dart';
 
 import '../../details/details_screen.dart';
 import 'item_card.dart';
-import 'item_card_v2.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key}) ;
@@ -46,11 +45,13 @@ class _BodyState extends State<Body> {
                   future: _products,
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return Center(child: CircularProgressIndicator());
+                      return const Center(child: CircularProgressIndicator(
+                        color: kMainDarkColor,
+                      ));
                     } else if (snapshot.hasError) {
                       return Text('Error: ${snapshot.error}');
                     } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                      return Text('No products available.');
+                      return const Text('No products available.');
                     } else {
                       List<Product> products = snapshot.data!;
                       return ListView.builder(

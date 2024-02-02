@@ -9,7 +9,7 @@ import 'favIcon.dart';
 class ItemCard extends StatefulWidget {
   final Product product;
   // final Function press;
-  const ItemCard(this.product,) ;
+  const ItemCard(this.product, {super.key}) ;
 
   @override
   State<ItemCard> createState() => _ItemCardState();
@@ -32,7 +32,7 @@ class _ItemCardState extends State<ItemCard> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: kTextColor,
                       spreadRadius: 0.1,
@@ -43,14 +43,14 @@ class _ItemCardState extends State<ItemCard> {
                 ),
                 child: Column(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 125,
                       child: Hero(
                         tag: "${widget.product.id}",
                         child: Image.network(widget.product.image.toString()),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Padding(
@@ -70,7 +70,7 @@ class _ItemCardState extends State<ItemCard> {
                                 children: [
                                   SvgPicture.asset(
                                     "assets/icons/Star.svg",
-                                    color: Color(0xFFEEA939),
+                                    color: const Color(0xFFEEA939),
                                     height: 10,
                                   ),
                                   Text(

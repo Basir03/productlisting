@@ -2,7 +2,6 @@ import 'dart:ui';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:fluttertoast/fluttertoast.dart';
 import '../details/components/botao_animado.dart';
 import '../details/components/input_customizado.dart';
@@ -37,7 +36,7 @@ class _signUpState extends State<signUp> with SingleTickerProviderStateMixin {
       end: 0,
     ).animate(
       CurvedAnimation(
-        parent: _controller!,
+        parent: _controller,
         curve: Curves.ease,
       ),
     );
@@ -47,7 +46,7 @@ class _signUpState extends State<signUp> with SingleTickerProviderStateMixin {
       end: 1,
     ).animate(
       CurvedAnimation(
-        parent: _controller!,
+        parent: _controller,
         curve: Curves.easeInOutQuint,
       ),
     );
@@ -57,17 +56,17 @@ class _signUpState extends State<signUp> with SingleTickerProviderStateMixin {
       end: 500,
     ).animate(
       CurvedAnimation(
-        parent: _controller!,
+        parent: _controller,
         curve: Curves.decelerate,
       ),
     );
 
-    _controller?.forward();
+    _controller.forward();
   }
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
   }
 

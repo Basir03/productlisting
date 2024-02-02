@@ -6,14 +6,13 @@ import '../../../Services/globle.dart';
 import '../../../models/Product.dart';
 
 class FavIcon extends StatelessWidget {
-  const FavIcon( this.product) ;
+  const FavIcon( this.product, {super.key}) ;
 
   final Product product;
 
   @override
   Widget build(BuildContext context) {
-    print(Globle.isfav);
-    print(Globle.projectid);
+
     return Container(
       height: 30,
       width: 30,
@@ -25,7 +24,7 @@ class FavIcon extends StatelessWidget {
             color: Globle.isfav == true && Globle.projectid==product.id? kMainDarkColor : kTextColor,
             spreadRadius: 1,
             blurRadius: 5,
-            offset: Offset(0, 4),
+            offset: const Offset(0, 4),
           ),
         ],
       ),

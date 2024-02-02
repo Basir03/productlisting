@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:productlisting/screens/home/FavouriteList.dart';
 
 import '../../../Services/constants.dart';
+import '../FavouriteList.dart';
 
 class UpperBody extends StatefulWidget {
   const UpperBody ({super.key});
@@ -25,10 +25,11 @@ class _UpperBodyState extends State<UpperBody> {
         ),
       ),
       child: Padding(
-        padding:  EdgeInsets.symmetric(
+        padding:  const EdgeInsets.symmetric(
             horizontal: kDefaultPaddin, vertical: kDefaultPaddin),
         child: Column(
           children: [
+            SizedBox(height: kDefaultPaddin,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -60,7 +61,7 @@ class _UpperBodyState extends State<UpperBody> {
                 child: Text(
                   "Find your Favorite Items!",
                   style: GoogleFonts.roboto(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 27,
                         color: kMainDarkColor),
@@ -76,7 +77,7 @@ class _UpperBodyState extends State<UpperBody> {
                     padding: const EdgeInsets.only(right: 10),
                     child: Container(
                         height: 35,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.all(
                             Radius.circular(24),
@@ -93,7 +94,7 @@ class _UpperBodyState extends State<UpperBody> {
                                 "assets/icons/search.svg",
                                 color: kTextColor,
                               ),
-                              contentPadding: EdgeInsets.symmetric(
+                              contentPadding: const EdgeInsets.symmetric(
                                 vertical: 11,
                               ),
                               border: InputBorder.none,
@@ -105,7 +106,7 @@ class _UpperBodyState extends State<UpperBody> {
                 Container(
                   height: 35,
                   width: 35,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
                   ),

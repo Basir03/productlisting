@@ -5,7 +5,6 @@ import 'package:productlisting/models/Product.dart';
 import '../../../Controller/productList.dart';
 import '../../Services/constants.dart';
 import '../../Services/globle.dart';
-import 'components/favIcon.dart';
 
 class FavouriteList extends StatefulWidget {
   const FavouriteList({super.key});
@@ -28,7 +27,9 @@ class _FavouriteListState extends State<FavouriteList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink,
+        backgroundColor: kMainColor,
+        title: const Text('Favorite Item',style: TextStyle(color: kMainDarkColor),),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -45,7 +46,9 @@ class _FavouriteListState extends State<FavouriteList> {
                   future: _products,
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
-                      return const Center(child: CircularProgressIndicator());
+                      return const Center(child: CircularProgressIndicator(
+                        color: kMainDarkColor,
+                      ));
                     } else if (snapshot.hasError) {
                       return Text('Error: ${snapshot.error}');
                     } else if (!snapshot.hasData || snapshot.data!.isEmpty) {

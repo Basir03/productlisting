@@ -37,7 +37,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
       end: 0,
     ).animate(
       CurvedAnimation(
-        parent: _controller!,
+        parent: _controller,
         curve: Curves.ease,
       ),
     );

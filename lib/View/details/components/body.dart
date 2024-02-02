@@ -92,7 +92,7 @@ class Body extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            "\$${product.price! + 100}",
+                            "\$${product.price + 100}",
                             style: const TextStyle(
                               fontWeight: FontWeight.w700,
                               fontSize: 16,
