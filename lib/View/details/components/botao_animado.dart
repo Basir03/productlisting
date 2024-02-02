@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:productlisting/screens/signUp.dart';
 
 class BotaoAnimado extends StatelessWidget {
   final AnimationController controller;

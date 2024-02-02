@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:productlisting/View/details/components/sizes.dart';
 
 import '../../../models/Product.dart';
-import '../../../screens/details/components/sizes.dart';
 
-import '../../../constants.dart';
+import '../../../Services/constants.dart';
 import 'cart_counter.dart';
 
 class Body extends StatelessWidget {
@@ -174,7 +174,7 @@ class Body extends StatelessWidget {
 }
 
 class productInfo extends StatelessWidget {
-  const productInfo(this.product, this.title, );
+  const productInfo(this.product, this.title, {super.key} );
 
   final String product;
   final String title;
@@ -186,14 +186,14 @@ class productInfo extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             color: Color(0xFF8B2833),
           ),
         ),
         Text(
           product,
           style: TextStyle(
-            color: Color(0xFF8B2833).withOpacity(0.5),
+            color: const Color(0xFF8B2833).withOpacity(0.5),
           ),
         ),
       ],

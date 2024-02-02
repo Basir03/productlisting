@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:productlisting/globle.dart';
+import 'package:productlisting/Services/globle.dart';
 
-import '../../../constants.dart';
+import '../../../Services/constants.dart';
 import '../../../models/Product.dart';
 import 'favIcon.dart';
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
-import '../../../globle.dart';
+import '../../../Services/constants.dart';
+import '../../../Services/globle.dart';
 import '../../../models/Product.dart';
 
 class FavIcon extends StatelessWidget {

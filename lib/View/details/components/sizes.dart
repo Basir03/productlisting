@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import '../../../Services/constants.dart';
 
 
 
 class Sizes extends StatefulWidget {
-  const Sizes();
+  const Sizes({super.key});
 
   @override
   _SizesState createState() => _SizesState();
@@ -23,11 +23,11 @@ class _SizesState extends State<Sizes> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Align(
+        const Align(
             alignment: Alignment.centerLeft,
             child: Text(
               "Size",
-              style: const TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
                 color: Colors.black,
@@ -66,7 +66,7 @@ class _SizesState extends State<Sizes> {
               color: kMainDarkColor.withOpacity(0.5),
             ),
 
-            borderRadius: BorderRadius.all(
+            borderRadius: const BorderRadius.all(
               Radius.circular(5),
             ),
           ),

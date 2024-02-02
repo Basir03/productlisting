@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:productlisting/models/Product.dart';
 
 import '../../../Controller/productList.dart';
-import '../../../constants.dart';
-import '../../globle.dart';
+import '../../Services/constants.dart';
+import '../../Services/globle.dart';
 import 'components/favIcon.dart';
 
 class FavouriteList extends StatefulWidget {

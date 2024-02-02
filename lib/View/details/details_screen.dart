@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:productlisting/screens/details/components/body.dart';
+import 'package:productlisting/View/details/components/body.dart';
 
-import '../../constants.dart';
+import '../../Services/constants.dart';
 import '../../models/Product.dart';
 
 
 class DetailsScreen extends StatelessWidget {
   final Product? product;
-
-  const DetailsScreen(this.product);
+  const DetailsScreen(this.product, {super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +27,9 @@ class DetailsScreen extends StatelessWidget {
         ),
         onPressed: () => Navigator.pop(context),
       ),
-      actions: <Widget>[
+      actions: const <Widget>[
         // FavIcon(product),
-        const SizedBox(width: kDefaultPaddin)
+        SizedBox(width: kDefaultPaddin)
       ],
     );
   }

@@ -1,4 +1,3 @@
-import 'package:productlisting/screens/home/components/favIcon.dart';
 
 class Globle{
 

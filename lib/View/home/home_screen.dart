@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:productlisting/screens/home/components/body.dart';
+import 'package:productlisting/View/home/components/body.dart';
 
 
-import '../../constants.dart';
+import '../../Services/constants.dart';
 import 'components/upper_body.dart';
 
 

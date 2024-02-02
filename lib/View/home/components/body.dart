@@ -3,7 +3,7 @@ import 'package:productlisting/models/Product.dart';
 
 
 import '../../../Controller/productList.dart';
-import '../../../constants.dart';
+import '../../../Services/constants.dart';
 
 import '../../details/details_screen.dart';
 import 'item_card.dart';

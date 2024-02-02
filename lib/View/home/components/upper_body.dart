@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:productlisting/screens/home/FavouriteList.dart';
 
-import '../../../constants.dart';
+import '../../../Services/constants.dart';
 
 class UpperBody extends StatefulWidget {
   const UpperBody ({super.key});
